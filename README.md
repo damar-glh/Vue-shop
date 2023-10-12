@@ -3,7 +3,6 @@ This is an online shop application using the Vue JS framework.
 
 ### Tools:
 <p>
-    <img alt="GitHub" src="https://img.shields.io/github/license/damar-glh/me">
     <img src="https://img.shields.io/badge/Text%20Editor-Visual%20Studio%20Code-blue?&logo=visual%20studio%20code&logoColor=blue" />
 </p>
 
