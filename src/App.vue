@@ -7,8 +7,6 @@
 </template>
 
 <script>
-// import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-// import Price from "./components/price/Price.vue";
 import ProductList from "./components/product-list/Product-List.vue";
 
 export default {
