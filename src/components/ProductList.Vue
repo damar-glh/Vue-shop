@@ -30,11 +30,14 @@
 </template>
 
 <script>
-import Price from "../price/Price.vue";
+import Price from "./Price.Vue";
 
 export default {
   name: "product-list",
-  props: ["product", "maximum"],
+  components: {
+    Price,
+  },
+  props: ["products", "maximum"],
   computed: {
     showItem: function () {
       let max = this.maximum;
@@ -42,9 +45,6 @@ export default {
         return item.price <= max;
       });
     },
-  },
-  components: {
-    Price,
   },
   methods: {
     before: function (el) {

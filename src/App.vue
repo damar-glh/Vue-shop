@@ -1,13 +1,12 @@
 <template>
   <div class="container mt-5">
     <h1>VueShop</h1>
-    <!-- eslint-disable -->
     <ProductList :product="products" :maximum="maximum"></ProductList>
   </div>
 </template>
 
 <script>
-import ProductList from "./components/product-list/Product-List.vue";
+import ProductList from "./components/ProductList.Vue";
 
 export default {
   name: "App",

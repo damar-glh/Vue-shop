@@ -1,10 +1,12 @@
 <template>
-  <!-- eslint-disable -->
-    <span>{{ this.prefix + Number.parseFloat(this.value).toFixed(this.precision) }}</span>
+  <span>{{
+    this.prefix + Number.parseFloat(this.value).toFixed(this.precision)
+  }}</span>
 </template>
 
 <script>
 export default {
+  name: "price",
   props: {
     value: Number,
     prefix: {
