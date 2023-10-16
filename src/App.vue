@@ -1,12 +1,12 @@
 <template>
-  <div class="container mt-5">
-    <h1>VueShop</h1>
-    <ProductList :product="products" :maximum="maximum"></ProductList>
+  <div id="app" class="container mt-5">
+    <h1>Vue Shop</h1>
+    <product-list :products="products" :maximum="maximum"></product-list>
   </div>
 </template>
 
 <script>
-import ProductList from "./components/ProductList.Vue";
+import ProductList from "./components/ProductList.vue";
 
 export default {
   name: "App",

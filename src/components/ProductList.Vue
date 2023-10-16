@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Price from "./Price.Vue";
+import Price from "./Price.vue";
 
 export default {
   name: "product-list",
