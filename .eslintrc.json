@@ -16,6 +16,7 @@
             "endOfLine": "auto"
         }],
         "vue/multi-word-component-names": "off",
-        "vue/comment-directive": "off"
+        "vue/comment-directive": "off",
+        "vue/no-deprecated-filter" : "off"
     }
 }
