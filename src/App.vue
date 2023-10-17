@@ -1,6 +1,10 @@
 <template>
   <div id="app" class="container mt-5">
     <h1>Vue Shop</h1>
+    <price-slider
+      :sliderStatus="sliderStatus"
+      v-model:maximum.sync="maximum"
+    ></price-slider>
     <product-list
       :products="products"
       :maximum="maximum"
@@ -11,6 +15,7 @@
 
 <script>
 import ProductList from "./components/ProductList.vue";
+import PriceSlider from "./components/PriceSlider.vue";
 
 export default {
   name: "App",
@@ -19,11 +24,13 @@ export default {
       maximum: 50,
       products: [],
       cart: [],
+      sliderStatus: true,
     };
   },
   components: {
     // FontAwesomeIcon,
     ProductList,
+    PriceSlider,
   },
   mounted: function () {
     fetch("https://hplussport.com/api/products/order/price")
