@@ -1,7 +1,10 @@
 <template>
   <transition name="fade">
     <div v-if="sliderStatus">
-      <div class="align-items-center" :class="sliderState">
+      <div
+        class="align-items-center justify-content-center"
+        :class="sliderState"
+      >
         <label for="" class="font-weight-bold mr-2">Max</label>
         <input
           type="number"
@@ -12,7 +15,7 @@
         />
         <input
           type="range"
-          class="custom-range"
+          class="form-range w-100"
           min="0"
           max="200"
           v-model="maxAmount"
