@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="container">
-    <h1>IDShop</h1>
     <navbar
       :cart="cart"
       :cartQty="cartQty"
