@@ -1,5 +1,12 @@
 <template>
   <div id="app" class="container">
+    <checkout
+      :cart="cart"
+      :cartQty="cartQty"
+      :cartTotal="cartTotal"
+      @delete="deleteItem"
+      @add="addItem"
+    ></checkout>
     <products
       :cart="cart"
       :cartQty="cartQty"
@@ -16,6 +23,7 @@
 
 <script>
 import Products from "./components/Products.vue";
+import Checkout from "./components/Checkout.vue";
 
 export default {
   name: "app",
@@ -31,6 +39,7 @@ export default {
   },
   component: {
     Products,
+    Checkout,
   },
   mounted: function () {
     fetch("https://hplussport.com/api/products/order/price")
