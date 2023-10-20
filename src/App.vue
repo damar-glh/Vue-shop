@@ -1,28 +1,21 @@
 <template>
   <div id="app" class="container">
-    <navbar
+    <products
       :cart="cart"
       :cartQty="cartQty"
       :cartTotal="cartTotal"
-      @toggle="toggleSliderStatus"
-      @delete="deleteItem"
-    ></navbar>
-    <price-slider
       :sliderStatus="style.sliderStatus"
       v-model:maximum="maximum"
-    ></price-slider>
-    <product-list
-      :maximum="maximum"
       :products="products"
+      @toggle="toggleSliderStatus"
+      @delete="deleteItem"
       @add="addItem"
-    ></product-list>
+    ></products>
   </div>
 </template>
 
 <script>
-import ProductList from "./components/ProductList.vue";
-import PriceSlider from "./components/PriceSlider.vue";
-import Navbar from "./components/Navbar.vue";
+import Products from "./components/Products.vue";
 
 export default {
   name: "app",
@@ -36,10 +29,8 @@ export default {
       },
     };
   },
-  components: {
-    ProductList,
-    PriceSlider,
-    Navbar,
+  component: {
+    Products,
   },
   mounted: function () {
     fetch("https://hplussport.com/api/products/order/price")

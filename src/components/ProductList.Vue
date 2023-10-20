@@ -13,7 +13,7 @@
       :data-index="index"
     >
       <div class="col-1 m-auto">
-        <button class="btn btn-info" @click="$emit('add', item)">+</button>
+        <button class="btn btn-info" @click="$emit('add-item', item)">+</button>
       </div>
       <div class="col-sm-4">
         <img :src="item.image" :alt="item.name" class="img-fluid d-block" />
@@ -51,14 +51,14 @@ export default {
       el.className = "d-none";
     },
     enter: function (el) {
-      var delay = el.dataset.index * 100;
+      let delay = el.dataset.index * 100;
       setTimeout(function () {
         el.className =
           "row d-flex mb-3 align-items-center animated fadeInRight";
       }, delay);
     },
     leave: function (el) {
-      var delay = el.dataset.index * 100;
+      let delay = el.dataset.index * 100;
       setTimeout(function () {
         el.className =
           "row d-flex mb-3 align-items-center animated fadeOutRight";
