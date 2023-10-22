@@ -9,7 +9,7 @@ import {
   faShoppingCart,
   faDollarSign,
 } from "@fortawesome/free-solid-svg-icons";
-import Products from "./components/Product";
+import Products from "./components/Products";
 import Checkout from "./components/Checkout";
 
 library.add(faShoppingCart, faDollarSign);
