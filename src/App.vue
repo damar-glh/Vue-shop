@@ -1,13 +1,6 @@
 <template>
   <div id="app" class="container">
-    <checkout
-      :cart="cart"
-      :cartQty="cartQty"
-      :cartTotal="cartTotal"
-      @delete="deleteItem"
-      @add="addItem"
-    ></checkout>
-    <products
+    <router-view
       :cart="cart"
       :cartQty="cartQty"
       :cartTotal="cartTotal"
@@ -17,7 +10,7 @@
       @toggle="toggleSliderStatus"
       @delete="deleteItem"
       @add="addItem"
-    ></products>
+    ></router-view>
   </div>
 </template>
 

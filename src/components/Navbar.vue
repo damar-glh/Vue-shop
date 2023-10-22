@@ -5,7 +5,7 @@
       <div class="navbar-text ml-auto d-flex">
         <button
           class="btn btn-sm btn-outline-success"
-          @click="$emit('toggle-slide')"
+          @click="$parent.$emit('toggle')"
         >
           <font-awesome-icon icon="dollar-sign"></font-awesome-icon>
         </button>
@@ -37,7 +37,7 @@
                 <a
                   href="#"
                   class="badge bg-warning text-white"
-                  @click.stop="$emit('delete-item', index)"
+                  @click.stop="$parent.$emit('delete', index)"
                 >
                   -
                 </a>

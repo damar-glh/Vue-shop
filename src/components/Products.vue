@@ -1,22 +1,12 @@
 <template>
   <div>
     <h1>IDShop</h1>
-    <navbar
-      :cart="cart"
-      :cartQty="cartQty"
-      :cartTotal="cartTotal"
-      @toggle-slide="toggleSlider"
-      @delete-item="deleteItem"
-    ></navbar>
+    <navbar :cart="cart" :cartQty="cartQty" :cartTotal="cartTotal"></navbar>
     <price-slider
       :sliderStatus="sliderStatus"
       v-v:maximum.sync="maximum"
     ></price-slider>
-    <product-list
-      :maximum="maximum"
-      :products="products"
-      @add-item="addItem"
-    ></product-list>
+    <product-list :maximum="maximum" :products="products"></product-list>
   </div>
 </template>
 
@@ -39,17 +29,6 @@ export default {
     Navbar,
     PriceSlider,
     ProductList,
-  },
-  methods: {
-    toggleSlider: function () {
-      this.$emit("toggle");
-    },
-    addItem: function (item) {
-      this.$emit("add", item);
-    },
-    deleteItem: function (index) {
-      this.$emit("delete", index);
-    },
   },
 };
 </script>
